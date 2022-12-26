@@ -47,11 +47,11 @@ def AddOptions():
                       dest = 'project-path',
                       type = 'string',
                       default = None,
-                      help = 'set dist-ide project output path')
+                      help = 'set project output path')
     AddOption('--project-name',
                       dest = 'project-name',
                       type = 'string',
-                      default = None,
+                      default = "project",
                       help = 'set project name')
     AddOption('--reset-project-config',
                       dest = 'reset-project-config',
@@ -85,6 +85,10 @@ def AddOptions():
                       dest = 'target',
                       type = 'string',
                       help = 'set target project: mdk/mdk4/mdk5/iar/vs/vsc/ua/cdk/ses/makefile/eclipse/codelite/cmake')
+    AddOption('--exec-prefix',
+                dest = 'exec-prefix',
+                type = 'string',
+                help = 'set RTT_EXEC_PREFIX temperately')
     AddOption('--exec-path',
                 dest = 'exec-path',
                 type = 'string',
